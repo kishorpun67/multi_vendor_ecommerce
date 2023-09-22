@@ -27,7 +27,12 @@
                     <td>{{$admin['type']}}</td>
                     <td>{{$admin['mobile']}}</td>
                     <td>{{$admin['email']}}</td>
-                    <td><img src="{{asset($admin['image'])}}" alt="" height="100" width="100" /></td>
+                    <td>
+                      @if(!empty($admin['image']) && file_exists($admin['image']))
+                        <img src="{{asset($admin['image'])}}" alt="" height="" width="" /></td>
+                      @else
+                        <img src="{{ asset('admin/images/no_image.png') }}" alt="">
+                      @endif
                     <td>
                       @if($admin['status']==1)
                         <a  class="updateAdminStatus" id="admin-{{$admin['id']}}" admin_id="{{$admin['id']}}"  href="javascript:(0);"><i style="font-size: 25px;" class="mdi mdi-bookmark-check" status="Active"></i> </i></a>

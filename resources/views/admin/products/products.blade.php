@@ -30,9 +30,12 @@
                         <td>{{$product['product_name']}}</td>
                         <td>{{$product['product_code']}}</td>
                         <td>{{$product['product_color']}}</td>
-                        <td>@if(!empty($product['product_image']))
-                          <img src="{{asset('image/product_image/small/'.$product['product_image'])}}" alt="" width="100px" height="100px"></td>
-                          @else 
+                        <td>
+                          <?php $product_image_path = 'image/product_image/small/'.$product['product_image']; ?>
+                          @if(!empty($product['product_image']) && file_exists($product_image_path))
+                            <img src="{{asset('image/product_image/small/'.$product['product_image'])}}" alt="" width="100px" height="100px"></td>
+                          @else
+                            <img src="{{ asset('admin/images/no_image.png') }}" alt="">
                           @endif
                         </td>
                         <td>

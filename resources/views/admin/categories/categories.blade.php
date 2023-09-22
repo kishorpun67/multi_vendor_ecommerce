@@ -37,7 +37,13 @@
                         </td>
                         <td>{{$parent_category}}</td>
                         <td>{{$category['category_name']}}</td>
-                        <td><img src="{{asset($category['category_image'])}}" alt=""></td>
+                        <td>
+                          @if(!empty($admin['category_image']) && file_exists($admin['category_image']))
+                            <img src="{{asset($category['category_image'])}}" alt="">
+                          @else
+                            <img src="{{ asset('admin/images/no_image.png') }}" alt="">
+                          @endif
+                        </td>
                         <td>
                         @if($category['status']==1)
                             <a  class="updatecategoryStatus" id="category-{{$category['id']}}" category_id="{{$category['id']}}"  href="javascript:(0);"><i style="font-size: 25px;" class="mdi mdi-bookmark-check" status="Active"></i> </i></a>

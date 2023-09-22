@@ -133,7 +133,7 @@ $(document).ready(function() {
     });
 
     // update appendCategoryLevel status 
-    $('body').change('#appendCategoryLevel', function() {
+    $('body').on('change','#appendCategoryLevel', function() {
         var section_id = $(this).val();
         console.log(section_id);
         $.ajax({

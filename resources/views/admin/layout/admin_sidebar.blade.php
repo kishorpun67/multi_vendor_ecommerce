@@ -254,7 +254,7 @@
         @endif">
         <a class="nav-link {{$collapse}}" data-toggle="collapse" href="#ui-section" aria-expanded="{{$expand}}" aria-controls="ui-section">
           <i class="icon-layout menu-icon"></i>
-          <span class="menu-title">Catelogue {{Session::get('page')}}</span>
+          <span class="menu-title">Catelogue </span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse {{$show}}" id="ui-section">

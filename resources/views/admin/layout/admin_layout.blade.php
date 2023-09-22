@@ -24,6 +24,19 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset('admin/images/favicon.png')}}" />
   <link rel="stylesheet" href="{{asset('admin/css/dataTables.bootstrap4.min.css')}}">
+  <style>
+  td {
+    font-size: $default-font-size;
+    img{
+      width: auto;
+      height: auto;
+      border-radius: 0 !important;
+    }
+    .badge {
+      margin-bottom: 0;
+    }
+  }
+  </style>
   @yield('style')
 </head>
 <body>

@@ -11,6 +11,7 @@ class SectionController extends Controller
     public function sections()
     {
         $sections = Section::get()->toArray();
+        Session::flash('page', 'catelogue');
         return view('admin.sections.sections')->with(compact('sections'));
     }
 
@@ -63,6 +64,7 @@ class SectionController extends Controller
             Session::flash('success_message', $message);
             return to_route('admin.sections');
         }
+        Session::flash('page', 'catelogue');
         return view('admin.sections.add_edit_section', compact('title','button','sectiondata'));
     }
     public function deteteSection($id)

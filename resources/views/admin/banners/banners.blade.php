@@ -25,7 +25,13 @@
                 @foreach ($banners as $banner)
                     <tr>
                         <td>{{$banner['id']}}</td>
-                        <td><img src="{{asset($banner['image'])}}" alt=""></td>
+                        <td>
+                          @if(!empty($banner['image']) && file_exists($banner['image']))
+                            <img src="{{asset($banner['image'])}}" alt="">
+                          @else
+                            <img src="{{ asset('admin/images/no_image.png') }}" alt="">
+                          @endif
+                        </td>
                         <td>{{$banner['banner_type']}}</td>
                         <td>{{$banner['link']}}</td>
                         <td>{{$banner['title']}}</td>

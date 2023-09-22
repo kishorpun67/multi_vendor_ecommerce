@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2023 at 02:15 PM
+-- Generation Time: Sep 22, 2023 at 10:10 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.1.2
 
@@ -47,8 +47,8 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `type`, `vendor_id`, `email`, `password`, `image`, `mobile`, `status`, `created_at`, `updated_at`, `confirm`) VALUES
-(1, 'Kishor Pun Magar', 'admin', 0, 'admin@admin.com', '$2y$10$hm9p6icymEW9jLi9zDSQGO4jufJsc/RiZjnUh8/I9WA7UEuEf4Vzi', 'storage/images/admin_image/1669125572.png', '98000000000000', 1, '2022-10-31 05:01:20', '2023-06-23 05:49:31', 'No'),
-(2, 'Jhon', 'vendor', 1, 'johan@admin.com', '$2y$10$hm9p6icymEW9jLi9zDSQGO4jufJsc/RiZjnUh8/I9WA7UEuEf4Vzi', 'storage/images/vendor_image/1688728741.jpg', '980000', 1, '2022-10-31 05:04:37', '2023-07-27 12:01:20', 'No'),
+(1, 'Kishor Pun Magar', 'admin', 0, 'admin@admin.com', '$2y$10$hm9p6icymEW9jLi9zDSQGO4jufJsc/RiZjnUh8/I9WA7UEuEf4Vzi', 'storage/images/admin_image/1669125572.png', '98000000000000', 1, '2022-10-31 05:01:20', '2023-06-23 05:49:31', 'Yes'),
+(2, 'Jhon', 'vendor', 1, 'johan@admin.com', '$2y$10$hm9p6icymEW9jLi9zDSQGO4jufJsc/RiZjnUh8/I9WA7UEuEf4Vzi', 'storage/images/vendor_image/1688728741.jpg', '980000', 1, '2022-10-31 05:04:37', '2023-07-27 12:01:20', 'Yes'),
 (5, 'Pradip', 'vendor', 2, 'pradipsyster@gmail.com', '$2y$10$JO8xXoQYmLjUxG4oczlW3u5ZBd9cL2QHAqLSjIH7mX/4CbBDw1x4G', '', '9754545454545', 1, '2023-07-07 06:44:26', '2023-07-10 08:52:19', 'No'),
 (6, 'Kishor Pun', 'vendor', 3, 'kishorpun55@gmail.com', '$2y$10$Tws853mmJObQnvlKVI6NqOynAMvtg476twm7vAzgwO/kJbnHdw.mO', '', '0988777663', 1, '2023-07-07 11:18:57', '2023-07-15 19:46:39', 'No'),
 (7, 'Kishor Pun', 'vendor', 4, 'kishorpun555@gmail.com', '$2y$10$umxIPYPinka2MjwtAWm5WeuasmgLJrWByUiYrjbCDQSnLAYJr.apu', '', '09887776635', 1, '2023-07-07 11:20:20', '2023-07-27 11:57:51', 'Yes'),
@@ -78,10 +78,11 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `image`, `link`, `title`, `alt`, `status`, `created_at`, `updated_at`, `banner_type`) VALUES
-(13, 'storage/images/banner_image/1688178016.png', 'Sed harum corporis p', 'Cupidatat aut et pra', 'Temporibus consequat', 1, '2023-06-30 20:35:16', '2023-09-16 14:46:07', 'Slider'),
-(14, 'storage/images/banner_image/1688178029.png', 'Eaque ipsam hic qui', 'Cupidatat facilis in', 'Debitis quas invento', 1, '2023-06-30 20:35:29', '2023-06-30 21:01:04', 'Slider'),
-(15, 'storage/images/banner_image/1688179591.png', 'Quia est consectetu', 'Quo officiis officia', 'Adipisicing delectus', 1, '2023-06-30 21:01:31', '2023-06-30 21:01:31', 'Fix'),
-(16, 'storage/images/banner_image/1688180804.jpg', 'Voluptatem sunt ex', 'Optio qui at archit', 'Eveniet aute perfer', 1, '2023-06-30 21:21:44', '2023-07-21 22:23:54', 'Fix');
+(13, 'storage/images/banner_image/1695411221.png', 'Sed harum corporis p', 'Cupidatat aut et pra', 'Temporibus consequat', 1, '2023-06-30 20:35:16', '2023-09-22 13:48:41', 'Slider'),
+(14, 'storage/images/banner_image/1695411128.png', 'Eaque ipsam hic qui', 'Cupidatat facilis in', 'Debitis quas invento', 1, '2023-06-30 20:35:29', '2023-09-22 13:47:08', 'Slider'),
+(15, 'storage/images/banner_image/1695411964.jpg', 'Quia est consectetu', 'Quo officiis officia', 'Adipisicing delectus', 1, '2023-06-30 21:01:31', '2023-09-22 14:01:04', 'Fix'),
+(16, 'storage/images/banner_image/1695412028.jpg', 'Voluptatem sunt ex', 'Optio qui at archit', 'Eveniet aute perfer', 1, '2023-06-30 21:21:44', '2023-09-22 14:02:08', 'Fix'),
+(17, 'storage/images/banner_image/1695410866.png', '', '', '', 1, '2023-09-22 13:42:47', '2023-09-22 13:42:47', 'Slider');
 
 -- --------------------------------------------------------
 
@@ -672,7 +673,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `user_id`, `name`, `address`, `city`, `state`, `country`, `pincode`, `mobile`, `email`, `shipping_charges`, `coupon_amount`, `coupon_code`, `order_status`, `payment_method`, `payment_geteway`, `grand_total`, `courier_name`, `tracking_number`, `created_at`, `updated_at`) VALUES
-(7, 1, 'Kishor Pun', 'Kishor Pun', 'Beni', 'Beni', 'Nepal', '234234', '98644346555', 'kishorpun55@gmail.com', 0.00, 2070.00, '2354zfz', 'Shipped', 'COD', 'COD', 8280.00, 'Fedex', '2342326', '2023-07-21 07:25:48', '2023-07-23 21:29:49'),
+(7, 1, 'Kishor Pun', 'Kishor Pun', 'Beni', 'Beni', 'Nepal', '234234', '98644346555', 'kishorpun55@gmail.com', 0.00, 2070.00, '2354zfz', 'Shipped', 'COD', 'COD', 8280.00, 'Fedex', '2342326', '2023-07-21 07:25:48', '2023-09-22 09:00:31'),
 (8, 1, 'Kishor Pun', 'Kishor Pun', 'Beni', 'Beni', 'Nepal', '234234', '98644346555', 'kishorpun55@gmail.com', 0.00, NULL, NULL, 'New', 'COD', 'COD', 900.00, '', '', '2023-07-21 14:17:46', '2023-07-21 14:17:46'),
 (9, 1, 'Kishor Pun', 'Kishor Pun', 'Beni', 'Beni', 'Nepal', '234234', '98644346555', 'kishorpun55@gmail.com', 0.00, NULL, NULL, 'New', 'COD', 'COD', 36000.00, '', '', '2023-07-22 02:01:25', '2023-07-22 02:01:25'),
 (10, 1, 'Kishor Pun', 'Kishor Pun', 'Beni', 'Beni', 'Nepal', '234234', '98644346555', 'kishorpun55@gmail.com', 0.00, NULL, NULL, 'New', 'COD', 'COD', 1350.00, '', '', '2023-07-23 00:21:16', '2023-07-23 00:21:16'),
@@ -799,7 +800,8 @@ INSERT INTO `order_logs` (`id`, `order_id`, `order_item_id`, `order_status`, `cr
 (21, 7, 4, 'Shipped', '2023-07-23 21:26:10', '2023-07-23 21:26:10'),
 (22, 7, 4, 'Shipped', '2023-07-23 21:28:25', '2023-07-23 21:28:25'),
 (23, 7, 0, 'Shipped', '2023-07-23 21:29:49', '2023-07-23 21:29:49'),
-(24, 25, 37, 'Shipped', '2023-07-26 07:45:36', '2023-07-26 07:45:36');
+(24, 25, 37, 'Shipped', '2023-07-26 07:45:36', '2023-07-26 07:45:36'),
+(25, 7, 0, 'Shipped', '2023-09-22 09:00:31', '2023-09-22 09:00:31');
 
 -- --------------------------------------------------------
 
@@ -1180,7 +1182,8 @@ INSERT INTO `recently_viewed_products` (`id`, `product_id`, `user_id`, `session_
 (70, 1, 0, 'eca7b1b64ff7d382b82bf1d5238e7fdd', '2023-08-01 00:21:00', '2023-08-01 00:21:00'),
 (71, 8, 0, 'eca7b1b64ff7d382b82bf1d5238e7fdd', '2023-08-01 00:31:30', '2023-08-01 00:31:30'),
 (72, 9, 0, 'dedd5b6adc5e2b7b4d208b7c80fcd327', '2023-09-18 16:11:36', '2023-09-18 16:11:36'),
-(73, 5, 0, 'a0bdf5aece759b7963787db87613025a', '2023-09-22 06:12:13', '2023-09-22 06:12:13');
+(73, 5, 0, 'a0bdf5aece759b7963787db87613025a', '2023-09-22 06:12:13', '2023-09-22 06:12:13'),
+(74, 1, 0, '0e0640b29115dd8b6b8e8ef29227774c', '2023-09-22 12:51:17', '2023-09-22 12:51:17');
 
 -- --------------------------------------------------------
 
@@ -1822,7 +1825,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `brands`
@@ -1906,7 +1909,7 @@ ALTER TABLE `orders_products`
 -- AUTO_INCREMENT for table `order_logs`
 --
 ALTER TABLE `order_logs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `order_statuses`
@@ -1966,7 +1969,7 @@ ALTER TABLE `ratings`
 -- AUTO_INCREMENT for table `recently_viewed_products`
 --
 ALTER TABLE `recently_viewed_products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT for table `sections`

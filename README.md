@@ -40,14 +40,15 @@
     <h3>======= VENDOR DASHBOARD =======</h3>
     <li> Vendor Details = Personal Details, Business Details, Bank Details </li>
     <li>Catelogue = Products, Coupon</li>
-    <li>Order = Orders & order Details, pdf, print</li>
+    <li>Order = Orders & order Details, pdf, print bill</li>
 </ul>
 <ul>
-    <h3>======= ADMIN DASHBOARD =======</h>
-    <li>Settings = Update Details, Change password</li>
+    <h3>======= ADMIN DASHBOARD =======</h3>
+    <li>Setting = Update Details, Change password</li>
     <li>Admin Management = Vendor, Admin</li>
     <li>Catelogue = Section, Category, Brand, Product, Cupons, Filters</li>
-    
+    <li>User Management, Review Management & Banner Management</li>
+    <li>Order = Orders & order Details, pdf, print bill</li>    
 </ul>
 
 

@@ -52,7 +52,7 @@
     <li>Order = Orders & order Details, pdf, print bill</li>    
 </ul>
 <h3>Screenshots :</h3>
-<img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/80970ca6-5f38-4695-81df-4541cbc9a75c" />
+<img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/80970ca6-5f38-4695-81df-4541cbc9a75c" /> <br>
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/9aea210f-cbb9-422b-a48e-4b02cd78f8bc">
  <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/1347b5d9-2aa0-4e56-b69f-682b40e89039">
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/e06871b8-61d0-4cc0-9fbf-a124c8d0ccfe">
@@ -69,6 +69,8 @@
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/5b58772f-c1c5-4776-8767-7f2efd201e39">
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/fe701db4-9201-4ceb-8a64-43f014473c3c">
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/7efc1558-6ffe-4edf-9e5b-8696358d72d4">
+<br> <br>
+<h5>Front End Shoots</h5>
 <img src=" ">
 <img src=" ">
 <img src=" ">

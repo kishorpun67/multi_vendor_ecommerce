@@ -52,6 +52,7 @@
     <li>Order = Orders & order Details, pdf, print bill</li>    
 </ul>
 <h3>Screenshots :</h3>
+<h5>Back End Screen Shoots</h5>
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/80970ca6-5f38-4695-81df-4541cbc9a75c" /> <br>
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/9aea210f-cbb9-422b-a48e-4b02cd78f8bc">
  <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/1347b5d9-2aa0-4e56-b69f-682b40e89039">
@@ -70,7 +71,7 @@
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/fe701db4-9201-4ceb-8a64-43f014473c3c">
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/7efc1558-6ffe-4edf-9e5b-8696358d72d4">
 <br> <br>
-<h5>Front End Shoots</h5>
+<h5>Front End Screen Shoots</h5>
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/96e40005-fcd8-4344-bdb6-fa2e6ca72034">
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/f7ae33fd-2668-4556-896d-65e48371e1fb">
 <img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/c3e9c829-a802-4f80-81aa-e0b3253a3b6d">

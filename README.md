@@ -1,4 +1,10 @@
-Set up :
+<ul>
+    <h3>
+        Set up :
+    </h3>
+    
+</ul>
+
 Clone the repo and cd into it
 In your terminal composer install
 Rename or copy .env.example file to .env

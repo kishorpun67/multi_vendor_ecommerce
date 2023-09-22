@@ -38,8 +38,8 @@
 </ul>
 <ul>
     <h3>======= VENDOR DASHBOARD =======</h3>
-    <li>Vednor Detal = Personal Details, Business Details, Bank Details</li>
-    <li>Catelogue = Products,Coupon</li>
+    <li> Vendor Details = Personal Details, Business Details, Bank Details </li>
+    <li>Catelogue = Products, Coupon</li>
     <li>Order = Orders & order Details, pdf, print</li>
 </ul>
 <ul>

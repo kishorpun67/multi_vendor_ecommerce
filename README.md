@@ -2,10 +2,11 @@
     <h3>
         Set up :
     </h3>
+    <li>Clone the repo and cd into it</li>
     
 </ul>
 
-Clone the repo and cd into it
+
 In your terminal composer install
 Rename or copy .env.example file to .env
 php artisan key:generate

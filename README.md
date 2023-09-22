@@ -1,63 +1,66 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<ol type="1">
+    <h3>
+        Set up :
+    </h3>
+    <li>Clone the repo and cd into it</li>
+    <li>In your terminal composer install</li>
+    <li>Rename or copy .env.example file to .env</li>
+    <li>php artisan key:generate</li>
+    <li>Set your database credentials in your .env file</li>
+    <li>Set your mail in your .env file </li>
+    <li>Import db file(mutli_vendor_ecommerce.sql) into your database (mysql,sql)</li>
+    <li>run command[laravel file manager]:- php artisan storage:link</li>
+    <li>Visit localhost:8000 in your browser</li>
+    <li>Visit localhost:8000/admin/login for admin (email = admin@admin.com, password=12345)</li>
+    <li>Visit localhost:8000/vendor/login-register for vednor (email = johan@admin.com, password=12345)</li>
+    <li>Visit localhost:8000/vendor/login-register for vednor (email = kishorpun55@gmail.com, password=12345)</li>
+</ol>
+<ul> 
+    <h3>
+        ====== FRONT-END =======
+    </h3>
+    <li>Responsive Layout</li>
+    <li>Category,Featured,Discounted,New Productct, Filter with ajax, search</li>
+    <li>Shopping Cart, Product Reviews & rating</li>
+    <li>Coupons, Discounts, shipping charge & pincode</li>
+    <li>Product attributes: cost price price, stock, size, filters</li>
+    <li>SEO support</li>
+    <li>Related Products,</li>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+</ul>
+<ul>
+    <h3>======= USER DASHBOARD =======</h3>
+    <li>Profile Settings</li>
+    <li>Products review  & rating</li>
+    <li>Cart</li>
+    <li>Checkout</li>
+    <li>Orders and order details</li>
+</ul>
+<ul>
+    <h3>======= VENDOR DASHBOARD =======</h3>
+    <li> Vendor Details = Personal Details, Business Details, Bank Details </li>
+    <li>Catelogue = Products, Coupon</li>
+    <li>Order = Orders & order Details, pdf, print bill</li>
+</ul>
+<ul>
+    <h3>======= ADMIN DASHBOARD =======</h3>
+    <li>Setting = Update Details, Change password</li>
+    <li>Admin Management = Vendor, Admin</li>
+    <li>Catelogue = Section, Category, Brand, Product, Cupons, Filters</li>
+    <li>User Management, Review Management & Banner Management</li>
+    <li>Order = Orders & order Details, pdf, print bill</li>    
+</ul>
+<h3>Screenshots :</h3>
+<img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/80970ca6-5f38-4695-81df-4541cbc9a75c" />
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+ 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 

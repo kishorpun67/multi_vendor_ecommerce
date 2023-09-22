@@ -51,8 +51,7 @@
     <li>Order = Orders & order Details, pdf, print bill</li>    
 </ul>
 <h3>Screenshots :</h3>
-<img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/80970ca6-5f38-4695-81df-4541cbc9a75c
-" />
+<img src="https://github.com/kishorpun67/multi_vendor_ecommerce/assets/71880698/80970ca6-5f38-4695-81df-4541cbc9a75c" />
 
 
 

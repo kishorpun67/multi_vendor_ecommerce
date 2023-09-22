@@ -21,12 +21,20 @@
     </h3>
     <li>Responsive Layout</li>
     <li>Category,Featured,Discounted,New Productct, Filter with ajax, search</li>
-    <li>Shopping Cart, Product Reviews</li>
+    <li>Shopping Cart, Product Reviews & rating</li>
     <li>Coupons, Discounts, shipping charge & pincode</li>
     <li>Product attributes: cost price price, stock, size, filters</li>
     <li>SEO support</li>
     <li>Related Products,</li>
 
+</ul>
+<ul>
+    <h3>======= USER DASHBOARD =======</h3>
+    <li>Profile Settings</li>
+    <li>Products review  & rating</li>
+    <li>Cart</li>
+    <li>Checkout</li>
+    <li>Orders and order details</li>
 </ul>
 
 

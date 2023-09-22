@@ -9,10 +9,10 @@
             <ul class="bread-crumb">
                 <li class="has-separator">
                     <i class="ion ion-md-home"></i>
-                    <a href="index.html">Home</a>
+                    <a href="{{route('index')}}">Home</a>
                 </li>
                 <li class="is-marked">
-                    <a href="about.html">About</a>
+                    <a href="#">About</a>
                 </li>
             </ul>
         </div>
@@ -25,25 +25,21 @@
             <div class="col-lg-6 col-md-12">
                 <div class="about-me-info u-s-m-b-30">
                     <h1>Welcome to
-                        <span>Stack Developers</span>
+                        <span>Multi Vendor E-comerce</span>
                     </h1>
-                    <p>Stack Developers Youtube channel is for every Student / Laravel developer from basic to expert level. Channel provides the Laravel Tutorial and training for the Laravel projects, specially E-commerce Website.
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus provident, illo aspernatur eius ab quis nisi. Consectetur harum, ipsam sequi aliquid animi soluta, cumque dolore et vero voluptate veritatis maiores.
                     </p>
-                    <p>Channel also provide complete source code / support who join the channel as a premium or advance member.
-                    </p>
-                    <p>Channel helps the students / developers in below way :-<br>
-                    1) Learn latest Laravel 6 / Laravel 7 / Laravel 8 quickly in easy step to step video tutorials<br>
-                    2) Live Sessions to give more tips and tricks and for more clarity.<br>
-                    3) Full support given to help to resolve issues.<br>
-                    4) Help to develop complex logics<br>
-                    5) Connect on Social Media<br>
+                   
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum quasi itaque fuga neque, ratione laborum labore nihil minima. Accusantium, inventore. Commodi quos rem consequuntur? Deserunt fugit fuga similique facilis ipsum!
                     </p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="about-me-image u-s-m-b-30">
                     <div class="banner-hover effect-border-scaling-gray">
-                        <a href="https://www.youtube.com/StackDevelopers"><img class="img-fluid" src="images/about/about-1.jpg" alt="About Picture"></a>
+                        <a href="javascript:void(0);"><img class="img-fluid" src="images/about/about-1.jpg" alt="About Picture"></a>
                     </div>
                 </div>
                 <div class="about-social text-center u-s-m-b-30">

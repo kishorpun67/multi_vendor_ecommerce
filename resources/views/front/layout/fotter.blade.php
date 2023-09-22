@@ -39,22 +39,6 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="footer-list">
-                        <h6>COLLECTION</h6>
-                        <ul>
-                            <li>
-                                <a href="cart.html">Men Clothing</a>
-                            </li>
-                            <li>
-                                <a href="checkout.html">Women Clothing</a>
-                            </li>
-                            <li>
-                                <a href="account.html">Kids Clothing</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-12">
-                    <div class="footer-list">
                         <h6>ACCOUNT</h6>
                         <ul>
                             <li>
@@ -85,7 +69,7 @@
                                 <a href="mailto:info@sitemakers.in">
                                     <i class="fas fa-envelope u-s-m-r-9"></i>
                                     <span>
-                                        info@sitemakers.in</span>
+                                        kishorpun55@gmail.com</span>
                                 </a>
                             </li>
                         </ul>
@@ -136,7 +120,7 @@
                 </ul>
             </div>
             <p class="copyright-text">Copyright &copy; 2022
-                <a target="_blank" rel="nofollow" href="https://youtube.com/stackdevelopers">Stack Developers</a> | All Right Reserved</p>
+                <a target="_blank" rel="nofollow" href="https://youtube.com/stackdevelopers">Multi Vendor e-commere</a> | All Right Reserved</p>
         </div>
     </div>
     <!-- Bottom-Footer /- -->

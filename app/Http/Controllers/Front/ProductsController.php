@@ -106,6 +106,7 @@ class ProductsController extends Controller
                     $categoryDetails['brandscrumbs'] = 'Best Seller Products';
                     $categoryDetails['categoryDetails']['category_name'] = 'Best Seller Products';
                     $categoryDetails['categoryDetails']['description'] = 'Best Seller Products';
+                    $categoryDetails['categoryDetails']['url'] = 'best-sellers';
                     $categoryProducts = Product::with('brand')
                     ->join('categories', 'categories.id','=','products.category_id')
                     ->where('products.status', 1)->where('products.is_best_seller', 'Yes');

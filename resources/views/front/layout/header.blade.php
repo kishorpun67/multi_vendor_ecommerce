@@ -17,7 +17,7 @@
                     <li>
                         <a href="mailto:info@sitemakers.in">
                             <i class="fas fa-envelope u-c-brand u-s-m-r-9"></i>
-                            E-mail: info@sitemakers.in
+                            E-mail: kishorpun55@gmail.com
                         </a>
                     </li>
                 </ul>
@@ -71,31 +71,6 @@
 
                         </ul>
                     </li>
-                    <li>
-                        <a>USD
-                            <i class="fas fa-chevron-down u-s-m-l-9"></i>
-                        </a>
-                        <ul class="g-dropdown" style="width:90px">
-                            <li>
-                                <a href="#" class="u-c-brand">($) USD</a>
-                            </li>
-                            <li>
-                                <a href="#">(£) GBP</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a>ENG
-                            <i class="fas fa-chevron-down u-s-m-l-9"></i>
-                        </a>
-                        <ul class="g-dropdown" style="width:70px">
-                            <li>
-                                <a href="#" class="u-c-brand">ENG</a>
-                            </li>
-                            <li>
-                                <a href="#">ARB</a>
-                            </li>
-                        </ul>
                 </ul>
             </nav>
         </div>
@@ -152,7 +127,6 @@
                                 <a id="mini-cart-trigger">
                                     <i class="ion ion-md-basket"></i>
                                     <span class="item-counter totalCartItems">{{$totalCartItem}}</span>
-                                    <span class="item-price">$220.00</span>
                                 </a>
                             </li>
                         </ul>
@@ -242,7 +216,7 @@
                                         @endif
 
                                     @endforeach
-{{--                                     
+                                    {{--                                     
                                     <li class="js-backdrop v-none" style="display: none">
                                         <a href="shop-v1-root-category.html">
                                             <i class="ion ion-md-rocket"></i>
@@ -316,7 +290,6 @@
                         </li>
                         <li>
                             <a href="{{route('search.products','search=discounted')}}">Discounted
-                                <span class="superscript-label-discount">-10%</span>
                             </a>
                         </li>
                         <li class="mega-position">
@@ -334,18 +307,6 @@
                                     </li>
                                     <li>
                                         <a href="{{route('faq')}}">FAQ</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li class="menu-title">COLLECTION</li>
-                                    <li>
-                                        <a href="cart.html">Men Clothing</a>
-                                    </li>
-                                    <li>
-                                        <a href="checkout.html">Women Clothing</a>
-                                    </li>
-                                    <li>
-                                        <a href="account.html">Kids Clothing</a>
                                     </li>
                                 </ul>
                                 <ul>

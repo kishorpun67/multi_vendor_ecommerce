@@ -16,12 +16,14 @@ class FiltersController extends Controller
     public function filters()
     {
         $filters = ProductsFilter::get()->toArray();
+        Session::flash('page', 'catelogue');
         return view('admin.filters.filters')->with(compact('filters'));
     }
 
     public function filtersValues()
     {
         $filtersValues = ProductsFiltersValue::get()->toArray();
+        Session::flash('page', 'catelogue');
         return view('admin.filters.filters_values')->with(compact('filtersValues'));
     }
 
@@ -74,30 +76,36 @@ class FiltersController extends Controller
         }
         if($request->isMethod('post')) {
             $data = $request->all();
+
+            // validation 
+
             $rules = [
-                'filter_name' => 'required',
-                'filter_column' => 'required',
-
-              
+                
+                'cat_ids' => 'required',
+                'filter_name' => 'required|unique:products_filters,filter_name,'.$filter->id,
+                'filter_column' => 'required|unique:products_filters,filter_column,'.$filter->id,
             ];
-
             $customMessages = [
-                'filter_name.required' => 'filter name is required!',
-                'filter_column.required' => 'filter column is required!',
-
+                'cat_ids.required' => 'Pleas select at least on category',
+                'filter_name.required' => 'filter name is required',
+                'filter_name.unique' => 'filter name is already exists',
+                'filter_column.required' => 'filter column is required',
+                'filter_column.unique' => 'filter column is already exists',
             ];
             $this->validate($request, $rules, $customMessages);
             $cat_ids = implode(',', $data['cat_ids']);
-
             $filter->filter_name = $data['filter_name'];
             $filter->filter_column = $data['filter_column'];
             $filter->cat_ids = $cat_ids;
             $filter->status = 1;
             $filter->save();
-            DB::statement('Alter table products add '.$data['filter_column'].' varchar(255) after description');
+            if (empty($id)) {
+                DB::statement('Alter table products add '.$data['filter_column'].' varchar(255) after description');
+            }
             Session::flash('success_message', $message);
             return to_route('admin.filters');
         }
+        Session::flash('page', 'catelogue');
         $categories = Category::with('subcategories')->where(['parent_id' =>0, 'status'=>1])->get()->toArray();
         return view('admin.filters.add_edit_filter', compact('title','button','filterdata', 'categories'));
     }
@@ -123,14 +131,10 @@ class FiltersController extends Controller
             $rules = [
                 'filter_id' => 'required',
                 'filter_value' => 'required',
-
-              
             ];
-
             $customMessages = [
                 'filter_id.required' => 'filter name is required!',
                 'filter_value.required' => 'filter value is required!',
-
             ];
             $this->validate($request, $rules, $customMessages);
             $filter->filter_id = $data['filter_id'];
@@ -138,9 +142,11 @@ class FiltersController extends Controller
             $filter->status = 1;
             $filter->save();
             Session::flash('success_message', $message);
+            Session::flash('page', 'catelogue');
             return to_route('admin.filters.values');
         }
         $filters = ProductsFilter::where('status',1)->get()->toArray();
+        Session::flash('page', 'catelogue');
         return view('admin.filters.add_edit_filter_value', compact('title','button','filters' ,'filtervaluedata'));
     }
     public function deteteFilter($id)

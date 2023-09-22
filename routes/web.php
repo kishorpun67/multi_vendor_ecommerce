@@ -143,6 +143,7 @@ Route::group([ 'prefix' => 'admin', 'as' => 'admin.'],function() {
 
         //  route for attributes 
         Route::match(['get','post'], 'add-attributes/{id}', [ProductsController::class, 'addAttributes'])->name('add.attributes');
+        Route::post('edit-attributes/{id?}',[ProductsController::class, 'editAttributes'])->name('edit.attributes');
         Route::post('update-attribute-status', [ProductsController::class, 'updateAttributeStatus'])->name('update.attribute.status');
         Route::get('add-attributes/delete-attribute/{id}', [ProductsController::class, 'deteteAttribute'])->name('delete.attribute');
 

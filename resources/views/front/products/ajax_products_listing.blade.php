@@ -27,7 +27,7 @@
                                 <a href="{{route('product.detail', $product['id'])}}">{{$product['product_color']}}</a>
                             </li>
                             <li>
-                                <a href="{{route('product.detail', $product['id'])}}">{{$product['brand']['brands']}}</a>
+                                <a href="{{route('product.detail', $product['id'])}}">{{$product['brand']['brands'] ?? ''}}</a>
                             </li>
                         </ul>
                         <h6 class="item-title">

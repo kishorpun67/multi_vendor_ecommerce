@@ -18,7 +18,7 @@
               selected =""
               @endif>Slider</option>
               <option value="Fix" @if (!empty($bannerdata['banner_type']) && 
-              $categorydata['banner_type'] == "Fix")
+              $bannerdata['banner_type'] == "Fix")
               selected =""
               @endif>Fix</option>
             </select>
@@ -40,11 +40,7 @@
           <div class="form-group">
             <label for="brand">Banner Link</label>
             <input type="text" class="form-control" id="" placeholder="Enter Link" name="link"
-            @if(!empty($bannerdata['link']))
-            value="{{$bannerdata['link']}}"
-            @else
-            value="{{old('link')}}"
-            @endif >
+            value="{{$bannerdata['link'] ?? old('link')}}">
             @error('link')
               <p  style="color: red">{{$message}}</p>
             @enderror
@@ -52,11 +48,7 @@
           <div class="form-group">
             <label for="brand">Banner Tilte</label>
             <input type="text" class="form-control" id="" placeholder="Enter Title" name="title"
-            @if(!empty($bannerdata['title']))
-            value="{{$bannerdata['title']}}"
-            @else
-            value="{{old('title')}}"
-            @endif >
+            value="{{$bannerdata['title'] ?? old('title')}}">
             @error('title')
               <p  style="color: red">{{$message}}</p>
             @enderror

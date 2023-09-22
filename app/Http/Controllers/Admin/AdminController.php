@@ -35,8 +35,6 @@ class AdminController extends Controller
         $categoryCount = Category::count();
         $orderCount = Order::count();
         $subscriberCount = NewslaterSubscriber::count();
-
-
         Session::flash('page', 'dashboard');
         return view('admin.admin_dashboard', compact('sectionCount', 'subscriberCount','orderCount',
         'couponCount', 'userCount', 'categoryCount', 'brandCount', 'productCount'));
@@ -63,7 +61,7 @@ class AdminController extends Controller
             // $admin->email= $data['email'];
             // $admin->password= Hash::make($data['password']);
             // $admin->save();
-            if(Auth::guard('admin')->attempt(['email' => $data['email'], 'password' => $data['password']])) {
+            if(Auth::guard('admin')->attempt(['email' => $data['email'], 'password' => $data['password'], 'type'=>'admin'])) {
                 Session::flash('success_message', 'Login Successfully');
                 return to_route('admin.dashboard');
             }else{
@@ -83,7 +81,7 @@ class AdminController extends Controller
 
                 // check new password ana confirm password
                 if($data['new_password']==$data['confirm_password']){
-                    Admin::where('id',auth('admin')->user()->id)->update(['password' => bcrypt($data['new_password'])]);
+                    Admin::where('id',auth('admin')->user()->id)->update(['password' => Hash::make($data['new_password'])]);
                     Session::flash('success_message', 'Password has been changed sucessfully');
                 }else{
                     Session::flash('error_message', 'New Password and Confirm Password is not Match');
@@ -107,7 +105,7 @@ class AdminController extends Controller
                 $rules = [
                     'name' => 'required|regex:/^[\pL\s\-]+$/u',
                     'mobile' =>'required|between:10,20',
-                    'image' =>'image:jpeg, png, bmp, gif',
+                    // 'image' =>'image:jpeg, png, bmp, gif',
                 ];
 
                 $customMessages = [
@@ -115,9 +113,9 @@ class AdminController extends Controller
                     'name.alpha' => 'alpha charcter is required',
                     'mobile.required' => 'mobile is required',
                     'mobile.between' => 'enter between 10 to 20 ',
-                    'image.image' =>'file must be image',
+                    // 'image.image' =>'file must be image',
                 ];
-                // $this->validate($request, $rules, $customMessages);
+                $this->validate($request, $rules, $customMessages);
 
                 // upload images
 

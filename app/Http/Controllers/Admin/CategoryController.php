@@ -17,6 +17,7 @@ class CategoryController extends Controller
         }, 'parentCategory'=>function($query){
             $query->select('id', 'category_name');
         }])->get()->toArray();
+        Session::flash('page', 'catelogue');
         return view('admin.categories.categories')->with(compact('categories'));
     }
 
@@ -122,7 +123,7 @@ class CategoryController extends Controller
             return to_route('admin.categories');
         }
         $sections = Section::where('status',1)->get()->toArray();
-
+        Session::flash('page', 'catelogue');
         return view('admin.categories.add_edit_category', compact('title','button','categorydata', 'categories', 'sections'));
     }
     public function deteteCategory($id)

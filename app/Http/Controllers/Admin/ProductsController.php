@@ -38,6 +38,7 @@ class ProductsController extends Controller
             $products = $products->where('vendor_id',$vendor_id);
         }
         $products = $products->get()->toArray();
+        Session::flash('page', 'catelogue');
         return view('admin.products.products')->with(compact('products'));
     }
 
@@ -73,19 +74,8 @@ class ProductsController extends Controller
             $message = "Product has been updated sucessfully";
         }
         if($request->isMethod('post')) {
-        $data = $request->all();
-            // dd($data);
-            // echo phpinfo(); die;
-            // if (extension_loaded('gd') && function_exists('gd')) {
-            //     return "gel install";
-            //     # code...
-            // } else {
-            //     # code...
-            //     return 'gd not installed';
-            // }
-
+            $data = $request->all();
             $rules = [
-                
                 'product_name' => 'required|regex:/^[\pL\s\-]+$/u',
                 'category_id' => 'required',
                 'brand_id' =>'required',
@@ -93,7 +83,7 @@ class ProductsController extends Controller
                 'product_price'=>'required',
                 'product_color'=>'required|regex:/^[\pL\s\-]+$/u',
                 'product_code'=>'required',
-                'product_image'=>'required',
+                // 'product_image'=>'required',
             ];
             $customMessages = [
                 'product_name.required' => 'Product Name is required!',
@@ -103,35 +93,9 @@ class ProductsController extends Controller
                 'product_price.required' => 'Product Price is required!',
                 'product_color.required' => 'Product Color is required!',
                 'product_code.required' => 'Product Code is required!',
-                'product_image.required' => 'Product Image is required!',
+                // 'product_image.required' => 'Product Image is required!',
             ];
-            // $this->validate($request, $rules, $customMessages);
-            // return 'test';
-
-            if(empty($data['product_discount']))
-            {
-                $data['product_discount'] = 0;
-            }
-            if(empty($data['description']))
-            {
-                $data['description'] = "";
-            }
-            if(empty($data['meta_title']))
-            {
-                $data['meta_title'] = "";
-            }
-            if(empty($data['meta_description']))
-            {
-                $data['meta_description'] = "";
-            }
-            if(empty($data['meta_keywords']))
-            {
-                $data['meta_keywords'] = "";
-            }
-            if(empty($data['product_weight']))
-            {
-                $data['product_weight'] = "";
-            }
+            $this->validate($request, $rules, $customMessages);
             $categoryDetails = Category::where('id', $data['category_id'])->first();
             if(empty($id)) {
                 $vendorType = auth('admin')->user()->type;
@@ -217,6 +181,7 @@ class ProductsController extends Controller
         $categories = Section::with(['categories'])->where('status',1)->get()->toArray();
         $brands = Brand::where('status',1)->get()->toArray();
         // $categories = Category::with('subcategories')->where(['parent_id' =>0, 'status'=>1])->get();
+        Session::flash('page', 'catelogue');
         return view('admin.products.add_edit_product', compact('title','button','productdata',  'brands','categories'));
     }
     public function deteteProduct($id)
@@ -237,11 +202,11 @@ class ProductsController extends Controller
                     if($attrCount>0){
                         return redirect()->back()->with('error_message', 'SKU already exits! Please another SKU.');
                     }
-                      // Prevent duplicate sku check
-                      $attrCount = ProductsAttribute::where(['product_id'=>$id,  'size'=>$data['size'][$key]])->count();
-                      if($attrCount>0){
-                          return redirect()->back()->with('error_message', $data['size'][$key]."\n".'fSize already exits! Please another SKU.');
-                      }
+                    // Prevent duplicate sku check
+                    $attrCount = ProductsAttribute::where(['product_id'=>$id,  'size'=>$data['size'][$key]])->count();
+                    if($attrCount>0){
+                        return redirect()->back()->with('error_message', " Size already exits! Please another Size.");
+                    }
                     $attribute = new ProductsAttribute;
                     $attribute->product_id = $id;
                     $attribute->sku = $val;
@@ -251,22 +216,38 @@ class ProductsController extends Controller
                     $attribute->status=1;
                     $attribute->save();
                 }
-
             }
             return redirect()->back()->with('success_message', 'Attributes has been added successfully!');
-
         }
+        Session::flash('page', 'catelogue');
         $attributes = Product::with('attributes')->where('id', $id)->first()->toArray();
         return view('admin.attributes.add_edit_attributes', compact('attributes'));
     }
     
+    public function editAttributes(Request $request, $id)
+    {
+        if($request->isMethod('post'))
+        {
+            $data = $request->all();
+            foreach($data['attrId'] as $key => $attr)
+            {
+                if(!empty($attr))
+                {
+                    ProductsAttribute::where(['id'=>$data['attrId'][$key]])->update(['price'=>$data['price'] [$key], 'stock'=>$data['stock'][$key]]);
+                }
+            }
+            $message = "successfully updated products attributes";
+            Session::flash('success_message', $message);
+            Session::flash('page', 'catelogue');
+            return redirect()->back();
+        }
 
+    }
     public function updateAttributeStatus(Request $request)
     {
         if($request->ajax()) {
             $data = $request->all();
             $admin =ProductsAttribute::where('id', $data['attribute_id'])->first();
-
             if($data['status']=="Active") {
                 $status = 0;
             }else {
@@ -309,10 +290,11 @@ class ProductsController extends Controller
                     $image->save();
                 }
             }
+            Session::flash('page', 'catelogue');
             return redirect()->back()->with('success_message', 'Image has been added successfully!');
         }
        $productDetails = Product::with('images')->find($id);
-        Session::flash('page', 'product');
+        Session::flash('page', 'catelogue');
         return view('admin.attributes.add_product_images', compact('productDetails'));
     }
     public function deteteImage($id) 

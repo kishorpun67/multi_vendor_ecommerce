@@ -30,6 +30,7 @@ class CouponsController extends Controller
         }else {
             $coupons = Coupon::get()->toArray();
         }
+        Session::flash('page', 'catelogue');
         return view('admin.coupons.coupons')->with(compact('coupons'));
     }
 
@@ -142,7 +143,7 @@ class CouponsController extends Controller
 
         // get all users email 
         $users = User::select('email')->where('status',1)->get()->toArray();
-
+        Session::flash('page', 'catelogue');
         return view('admin.coupons.add_edit_coupon', compact('title','button','coupondata', 
         'categories','users', 'brands', 'selCats', 'selBrands','selUsers'));
     }

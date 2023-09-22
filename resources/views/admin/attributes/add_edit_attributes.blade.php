@@ -41,7 +41,7 @@
         <h4 class="card-title">Stock</h4>
         <div class="table-responsive pt-3">
           <form class="forms-sample" method="POST" @if(!empty($attributes['id'])) 
-            action="{{route('admin.add.attributes',$attributes['id'])}}"@endif>
+            action="{{route('admin.edit.attributes',$attributes['id'])}}"@endif>
             @csrf
               <table id="section" class="table table-bordered">
                 <thead>
@@ -57,6 +57,7 @@
                 <tbody>
                   @foreach ($attributes['attributes'] as $attribute)
                       <tr>
+                          <input type="hidden" name="attrId[]" value="{{$attribute['id']}}">
                           <td>{{$attribute['id']}}</td>
                           <td>{{$attribute['sku']}}</td>
                           <td>{{$attribute['size']}}</td>
@@ -64,9 +65,9 @@
                           <td><input type="number" style="width:80px;" name="stock[]" id=""  value="{{$attribute['stock']}}"></td>
                           <td>
                           @if($attribute['status']==1)
-                              <a  class="updateattributeStatus" id="attribute-{{$attribute['id']}}" attribute_id="{{$attribute['id']}}"  href="javascript:(0);"><i style="font-size: 25px;" class="mdi mdi-bookmark-check" status="Active"></i> </i></a>
+                            <a  class="updateattributeStatus" id="attribute-{{$attribute['id']}}" attribute_id="{{$attribute['id']}}"  href="javascript:(0);"><i style="font-size: 25px;" class="mdi mdi-bookmark-check" status="Active"></i> </i></a>
                           @else
-                              <a class="updateattributeStatus" id="attribute-{{$attribute['id']}}" attribute_id="{{$attribute['id']}}" href="javascript:(0);"><i style="font-size: 25px;" class="mdi mdi-bookmark-outline" status="Inactive"></i> </a>
+                            <a class="updateattributeStatus" id="attribute-{{$attribute['id']}}" attribute_id="{{$attribute['id']}}" href="javascript:(0);"><i style="font-size: 25px;" class="mdi mdi-bookmark-outline" status="Inactive"></i> </a>
                           @endif
                           </td>
                       </tr>

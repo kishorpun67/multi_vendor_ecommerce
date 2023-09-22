@@ -4,12 +4,12 @@
     </h3>
     <li>Clone the repo and cd into it</li>
     <li>In your terminal composer install</li>
+    <li>Rename or copy .env.example file to .env</li>
     
 </ol>
 
 
 
-Rename or copy .env.example file to .env
 php artisan key:generate
 Set your database credentials in your .env file
 Set your mail in your .env file 

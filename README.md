@@ -15,6 +15,19 @@
     <li>Visit localhost:8000/vendor/login-register for vednor (email = johan@admin.com, password=12345)</li>
     <li>Visit localhost:8000/vendor/login-register for vednor (email = kishorpun55@gmail.com, password=12345)</li>
 </ol>
+<ul> 
+    <h3>
+        ====== FRONT-END =======
+    </h3>
+    <li>Responsive Layout</li>
+    <li>Category,Featured,Discounted,New Productct, Filter with ajax, search</li>
+    <li>Shopping Cart, Product Reviews</li>
+    <li>Coupons, Discounts, shipping charge & pincode</li>
+    <li>Product attributes: cost price price, stock, size, filters</li>
+    <li>SEO support</li>
+    <li>Related Products,</li>
+
+</ul>
 
 
 

@@ -42,6 +42,13 @@
     <li>Catelogue = Products,Coupon</li>
     <li>Order = Orders & order Details, pdf, print</li>
 </ul>
+<ul>
+    <h3>======= ADMIN DASHBOARD =======</h>
+    <li>Settings = Update Details, Change password</li>
+    <li>Admin Management = Vendor, Admin</li>
+    <li>Catelogue = Section, Category, Brand, Product, Cupons, Filters</li>
+    
+</ul>
 
 
 

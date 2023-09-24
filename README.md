@@ -2,7 +2,6 @@
     <h3>
         Set up :
     </h3>
-    <h5>Admin Screen Shoots</h5>
     <li>Clone the repo and cd into it</li>
     <li>In your terminal composer install</li>
     <li>Rename or copy .env.example file to .env</li>

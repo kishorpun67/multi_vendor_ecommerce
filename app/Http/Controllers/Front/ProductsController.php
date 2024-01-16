@@ -183,7 +183,7 @@ class ProductsController extends Controller
         $totalStock = ProductsAttribute::where(['product_id'=>$productDetails['id'], 'status'=>1])->sum('stock');
 
         // get similar proucts
-        $similarProuducts = Product::with('brand')->where('category_id', $productDetails['category']['id'])->inRandomOrder()
+       $similarProuducts = Product::with('brand')->where('category_id', $productDetails['category']['id'])->inRandomOrder()
         ->where('status', 1)->where('id', '!=', $id)->limit(6)->get()->toArray();
 
 

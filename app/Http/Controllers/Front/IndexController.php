@@ -13,7 +13,6 @@ class IndexController extends Controller
 {
     public function index() 
     {
-        
         $sliderBanners = Banner::where(['banner_type'=>'Slider', 'status'=>1])->get()->toArray();
         $fixBanner = Banner::where(['banner_type'=>'Fix', 'status'=>1])->get()->toArray();
         $newProducts = Product::orderBy('id', 'Desc')->where('status',1)->limit(8)->get()->toArray();

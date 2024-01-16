@@ -529,12 +529,12 @@ $(document).ready(function (){
         var coupon_amount = $(this).attr('coupon_amount');
         var cod_checkout_pincode = $(this).attr('codpincodeCount');
 
-        if(cod_checkout_pincode == 0) {
-            $('.codMethod').hide();
-        } else {
-            $('.codMethod').show();
+        // if(cod_checkout_pincode == 0) {
+        //     $('.codMethod').hide();
+        // } else {
+        //     $('.codMethod').show();
 
-        }
+        // }
         if(coupon_amount == "") {
             coupon_amount = 0;
         }

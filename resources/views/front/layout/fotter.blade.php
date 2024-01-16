@@ -57,7 +57,7 @@
                         <ul>
                             <li>
                                 <i class="fas fa-location-arrow u-s-m-r-9"></i>
-                                <span>Stack Developers Youtube Channel</span>
+                                <span>Kishor Pun Magar</span>
                             </li>
                             <li>
                                 <a href="tel:+111-222-333">
@@ -120,7 +120,7 @@
                 </ul>
             </div>
             <p class="copyright-text">Copyright &copy; 2022
-                <a target="_blank" rel="nofollow" href="https://youtube.com/stackdevelopers">Multi Vendor e-commere</a> | All Right Reserved</p>
+                <a  rel="nofollow" href="#">Multi Vendor e-commere</a> | All Right Reserved</p>
         </div>
     </div>
     <!-- Bottom-Footer /- -->

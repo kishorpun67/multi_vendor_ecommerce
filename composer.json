@@ -12,6 +12,7 @@
         "laravel/framework": "^9.2",
         "laravel/helpers": "^1.6",
         "laravel/sanctum": "^2.14.1",
+        "laravel/socialite": "^5.11",
         "laravel/tinker": "^2.7",
         "maatwebsite/excel": "^3.1",
         "milon/barcode": "^10.0"

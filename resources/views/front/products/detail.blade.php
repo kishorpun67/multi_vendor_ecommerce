@@ -510,7 +510,8 @@
                     </div>
                     <div class="slider-fouc">
                         <div class="products-slider owl-carousel" data-item="4">
-                            @foreach ($similarProuducts as $product)
+                            
+                            @forelse($similarProuducts as $product)
                                 <div class="item">
                                     <div class="image-container">
                                         <a class="item-img-wrapper-link" href="{{route('product.detail', $product['id'])}}">
@@ -533,7 +534,11 @@
                                                     <a href="{{route('product.detail', $product['id'])}}">{{$product['product_color']}}</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{route('product.detail', $product['id'])}}">{{$product['brand']['brands']}}</a>
+                                                    <a href="{{route('product.detail', $product['id'])}}"> 
+                                                        @if (!empty($product['brand']['brands']))
+                                                            {{$product['brand']['brands']}}
+                                                        @endif
+                                                </a>
                                                 </li>
                                             </ul>
                                             <h6 class="item-title">
@@ -573,7 +578,8 @@
                                     @else
                                     @endif
                                 </div>
-                            @endforeach 
+                            @empty
+                            @endforelse 
                         </div>
                     </div>
                 </div>
@@ -610,7 +616,11 @@
                                                     <a href="{{route('product.detail', $product['id'])}}">{{$product['product_color']}}</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{route('product.detail', $product['id'])}}">{{$product['brand']['brands']}}</a>
+                                                    <a href="{{route('product.detail', $product['id'])}}">
+                                                        @if (!empty($product['brand']['brands']))
+                                                            {{$product['brand']['brands']}}
+                                                        @endif                                                    
+                                                    </a>
                                                 </li>
                                             </ul>
                                             <h6 class="item-title">

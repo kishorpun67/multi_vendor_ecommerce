@@ -68,6 +68,9 @@
                                     <button class="button button-outline-secondary w-100">Login</button>
                                 </div>
                             </form>
+                            <br>
+                            <a href="{{route('google')}}" class="btn btn-danger"><i class="fab fa-google-plus-g"></i> Login With Google</a>
+                           <br> <br><a href="{{route('facebook')}}" class="btn btn-primary"><i class="fab fa-facebook"></i> Login With Facebook</a>
                         </div>
                     </div>
                     <!-- Login /- -->
@@ -118,7 +121,7 @@
                                     <button type="submit" id="user-button" class="button button-primary w-100">Register</button>
                                 </div>
                             </form>
-                        </div>
+
                     </div>
                     <!-- Register /- -->
                 </div>

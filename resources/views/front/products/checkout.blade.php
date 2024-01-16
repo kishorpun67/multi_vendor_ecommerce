@@ -136,14 +136,6 @@
                                     <label class="label-text" for="cash-on-delivery">Cash on Delivery</label>
                                 </div>
                                 <div class="u-s-m-b-13">
-                                    <input type="radio" class="radio-box" name="payment-method" id="credit-card-stripe">
-                                    <label class="label-text" for="credit-card-stripe">Credit Card (Stripe)</label>
-                                </div>
-                                <div class="u-s-m-b-13">
-                                    <input type="radio" class="radio-box" name="payment-method" id="paypal">
-                                    <label class="label-text" for="paypal">Paypal</label>
-                                </div>
-                                <div class="u-s-m-b-13">
                                     <input type="checkbox" class="check-box" id="accept" name="accept" value="Yes">
                                     <label class="label-text no-color" for="accept">I’ve read and accept the
                                         <a href="terms-and-conditions.html" class="u-c-brand">terms & conditions</a>

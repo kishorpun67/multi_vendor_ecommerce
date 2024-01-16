@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2023 at 10:10 PM
+-- Generation Time: Jan 16, 2024 at 11:37 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.1.2
 
@@ -133,6 +133,14 @@ CREATE TABLE `carts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`id`, `session_id`, `user_id`, `product_id`, `size`, `quantity`, `created_at`, `updated_at`) VALUES
+(46, 'afc16e97412a504114da578044dd29a0', 0, 7, 'XL', 1, '2024-01-15 21:01:55', '2024-01-15 21:01:55'),
+(47, 'a70150bc2d30c05b3cc2c9bec8f3faf3', 0, 3, 'Small', 1, '2024-01-16 05:54:41', '2024-01-16 05:54:41');
+
 -- --------------------------------------------------------
 
 --
@@ -164,8 +172,9 @@ INSERT INTO `categories` (`id`, `parent_id`, `section_id`, `category_name`, `cat
 (1, 0, 2, 'Smartphones', 'storage/images/category/1669213241.jpg', '0', 'Maxime corrupti est', 'smart-phones', 'Ex assumenda minima', 'Error quo non nostru', 'Autem ipsum aliqua', 1, '2022-11-23 08:28:50', '2023-07-05 06:01:00'),
 (4, 0, 1, 'Clothing', 'storage/images/category/1688198303.jpg', '0', '', 'clothing', 'Men\'s Fashion', '', '', 1, '2023-06-23 07:29:23', '2023-07-27 23:33:54'),
 (5, 4, 1, 'Shrits', '', '0', '', 'shirts', 'Men\'s Fashion', '', '', 1, '2023-07-05 06:03:33', '2023-07-27 23:33:19'),
-(6, 0, 2, 'Laptops', '', '0', '', 'lap-tops', '', '', '', 1, '2023-07-05 06:04:17', '2023-07-05 06:04:17'),
-(7, 0, 2, 'Desktops', '', '0', '', 'desktops', '', '', '', 1, '2023-07-05 06:05:07', '2023-07-05 06:05:07');
+(6, 0, 2, 'Laptops', '', '0', '', 'lap-tops', '', '', '', 1, '2023-07-05 06:04:17', '2024-01-15 20:17:56'),
+(7, 0, 2, 'Desktops', '', '0', '', 'desktops', '', '', '', 1, '2023-07-05 06:05:07', '2023-07-05 06:05:07'),
+(8, 0, 4, 'Whilemina Riddle', '', 'Beatae et tempora od', 'Ad dolor cupidatat e', 'Sit ad anim hic mol', 'Culpa ab provident', 'Consequatur lorem re', 'Porro dolorem volupt', 1, '2024-01-15 20:53:39', '2024-01-15 20:53:39');
 
 -- --------------------------------------------------------
 
@@ -614,7 +623,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (54, '2023_07_25_135508_add_column_to_vendors_table', 37),
 (55, '2023_07_27_132709_create_contacts_table', 38),
 (56, '2023_07_28_114702_create_newslater_subscribers_table', 38),
-(57, '2023_07_30_103550_create_ratings_table', 39);
+(57, '2023_07_30_103550_create_ratings_table', 39),
+(58, '2023_12_27_184116_add_column_to_users', 40);
 
 -- --------------------------------------------------------
 
@@ -690,7 +700,9 @@ INSERT INTO `orders` (`id`, `user_id`, `name`, `address`, `city`, `state`, `coun
 (21, 1, 'Kishor Pun', 'Kishor Pun', 'Beni', 'Beni', 'Afghanistan', '23423', '9864434655', 'kishorpun55@gmail.com', 50.00, NULL, NULL, 'New', 'COD', 'COD', 3650.00, '', '', '2023-07-24 05:30:29', '2023-07-24 05:30:29'),
 (23, 1, 'Kishor Pun', 'Kishor Pun', 'Beni', 'Beni', 'Afghanistan', '23423', '9864434655', 'kishorpun55@gmail.com', 50.00, NULL, NULL, 'New', 'COD', 'COD', 2750.00, '', '', '2023-07-24 05:58:38', '2023-07-24 05:58:38'),
 (24, 1, 'Kishor Pun', 'Kishor Pun', 'Beni', 'Beni', 'Nepal', '234234', '98644346555', 'kishorpun55@gmail.com', 50.00, NULL, NULL, 'New', 'COD', 'COD', 1850.00, '', '', '2023-07-24 06:00:31', '2023-07-24 06:00:31'),
-(25, 1, 'Kishor Pun', 'Kishor Pun', 'Beni', 'Beni', 'Nepal', '44600', '98644346555', 'kishorpun55@gmail.com', 0.00, 1800.00, 'YYJm3xKM', 'New', 'COD', 'COD', 7200.00, '', '', '2023-07-26 07:17:12', '2023-07-26 07:17:12');
+(25, 1, 'Kishor Pun', 'Kishor Pun', 'Beni', 'Beni', 'Nepal', '44600', '98644346555', 'kishorpun55@gmail.com', 0.00, 1800.00, 'YYJm3xKM', 'New', 'COD', 'COD', 7200.00, '', '', '2023-07-26 07:17:12', '2023-07-26 07:17:12'),
+(26, 1, 'Kishor Pun', 'Ruma', 'Beni', 'Beni', 'Nepal', '44600', '98644346555', 'kishorpun55@gmail.com', 50.00, NULL, NULL, 'New', 'COD', 'COD', 771.80, '', '', '2024-01-15 20:43:12', '2024-01-15 20:43:12'),
+(27, 1, 'Kishor Pun', 'Ruma', 'Beni', 'Beni', 'Nepal', '44600', '98644346555', 'kishorpun55@gmail.com', 50.00, NULL, NULL, 'New', 'COD', 'COD', 950.00, '', '', '2024-01-16 05:56:52', '2024-01-16 05:56:52');
 
 -- --------------------------------------------------------
 
@@ -755,7 +767,9 @@ INSERT INTO `orders_products` (`id`, `order_id`, `user_id`, `vendor_id`, `admin_
 (34, 23, 1, 0, 1, 4, 'Full Shirt', '0011', 'Black', 'XLL', '900', '3', '', '', '', '2023-07-24 05:58:38', '2023-07-24 05:58:38'),
 (35, 24, 1, 0, 1, 4, 'Full Shirt', '0011', 'Black', 'XL', '450', '2', '', '', '', '2023-07-24 06:00:31', '2023-07-24 06:00:31'),
 (36, 24, 1, 0, 1, 4, 'Full Shirt', '0011', 'Black', 'XLL', '900', '1', '', '', '', '2023-07-24 06:00:31', '2023-07-24 06:00:31'),
-(37, 25, 1, 3, 6, 9, 'Black Shirt', '888343', 'Black', 'XL', '9000', '1', 'Fedex', '12345', 'Shipped', '2023-07-26 07:17:12', '2023-07-26 07:45:36');
+(37, 25, 1, 3, 6, 9, 'Black Shirt', '888343', 'Black', 'XL', '9000', '1', 'Fedex', '12345', 'Shipped', '2023-07-26 07:17:12', '2023-07-26 07:45:36'),
+(38, 26, 1, 0, 1, 3, 'Summer Shirt', '077', 'White', 'XLLL', '360.9', '2', '', '', '', '2024-01-15 20:43:12', '2024-01-15 20:43:12'),
+(39, 27, 1, 0, 1, 3, 'Summer Shirt', '077', 'White', 'Small', '900', '1', '', '', '', '2024-01-16 05:56:52', '2024-01-16 05:56:52');
 
 -- --------------------------------------------------------
 
@@ -862,6 +876,15 @@ CREATE TABLE `personal_access_tokens` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `personal_access_tokens`
+--
+
+INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `created_at`, `updated_at`) VALUES
+(1, 'App\\Models\\User', 1, 'auth_token', 'dd7ff18bd1ce7af205676b62918613977864272e1c464a407daef47d31658ce2', '[\"*\"]', NULL, '2023-10-14 06:32:19', '2023-10-14 06:32:19'),
+(2, 'App\\Models\\User', 1, 'auth_token', '8368bf7ba3cd3148792c20f074a2a056a0ecb26ac714752daba9602e0462e5e8', '[\"*\"]', '2023-10-14 07:17:32', '2023-10-14 07:13:29', '2023-10-14 07:17:32'),
+(3, 'App\\Models\\Admin', 1, 'auth_token', 'e325b57a1a323d1a35e3b26e6fa59ee3c480e5d1d6d39ddccd9bdcc64ebc32a6', '[\"*\"]', '2023-10-14 07:42:05', '2023-10-14 07:24:50', '2023-10-14 07:42:05');
+
 -- --------------------------------------------------------
 
 --
@@ -962,14 +985,14 @@ CREATE TABLE `products_attributes` (
 
 INSERT INTO `products_attributes` (`id`, `product_id`, `size`, `price`, `stock`, `status`, `created_at`, `updated_at`, `sku`) VALUES
 (1, 4, 'XL', 500.00, 0, 1, '2022-12-03 19:53:24', '2023-07-24 06:39:13', 'GTX-000'),
-(3, 3, 'XXX', 357.00, 100, 1, '2023-02-16 06:01:23', '2023-09-20 03:43:38', 'Praesentium quis eiu'),
-(4, 3, 'XLLL', 401.00, 20, 1, '2023-02-16 06:01:23', '2023-09-20 03:43:38', 'Lorem culpa minim s'),
+(3, 3, 'XXX', 357.00, 100, 1, '2023-02-16 06:01:23', '2024-01-15 21:05:39', 'Praesentium quis eiu'),
+(4, 3, 'XLLL', 401.00, 18, 1, '2023-02-16 06:01:23', '2024-01-15 21:05:39', 'Lorem culpa minim s'),
 (5, 4, 'XLL', 1000.00, 96, 1, '2023-04-13 04:24:11', '2023-07-24 06:00:31', 'GTXx-000'),
 (6, 5, 'XLL', 2000.00, 100, 1, '2023-07-06 21:56:03', '2023-07-06 21:56:03', 'O99'),
 (7, 5, 'XL', 1800.00, 100, 1, '2023-07-06 21:56:03', '2023-07-06 21:56:03', '009'),
-(8, 3, 'Small', 1000.00, 100, 1, '2023-07-10 04:41:01', '2023-09-20 03:43:38', '077-small'),
-(9, 3, 'Medium', 1500.00, 100, 1, '2023-07-10 04:41:01', '2023-09-20 03:43:38', '077-medium'),
-(10, 3, 'Large', 2000.00, 100, 1, '2023-07-10 04:41:01', '2023-09-20 03:43:38', '077-large'),
+(8, 3, 'Small', 1000.00, 99, 1, '2023-07-10 04:41:01', '2024-01-16 05:56:52', '077-small'),
+(9, 3, 'Medium', 1500.00, 0, 1, '2023-07-10 04:41:01', '2024-01-15 21:05:39', '077-medium'),
+(10, 3, 'Large', 2000.00, 100, 1, '2023-07-10 04:41:01', '2024-01-15 21:05:39', '077-large'),
 (11, 7, 'XL', 10000.00, 100, 1, '2023-07-10 06:29:51', '2023-07-10 06:29:51', 'GTX-001'),
 (12, 9, 'XL', 10000.00, 99, 1, '2023-07-22 01:59:51', '2023-07-26 07:17:12', 'GTX-00011'),
 (13, 5, 'Xxl', 100.00, 100, 1, '2023-09-20 04:39:37', '2023-09-20 04:39:37', 'GTX-00029');
@@ -1065,7 +1088,9 @@ INSERT INTO `products_images` (`id`, `product_id`, `image`, `status`, `created_a
 (3, 4, '12894.jpeg', 1, '2023-06-23 03:37:33', '2023-06-23 04:11:15'),
 (5, 5, '98920.jpg', 1, '2023-07-06 22:10:08', '2023-07-06 22:10:08'),
 (6, 3, '428.jpg', 1, '2023-07-10 08:17:17', '2023-07-10 08:17:17'),
-(7, 3, '5486.jpg', 1, '2023-07-10 08:17:41', '2023-07-10 08:17:41');
+(7, 3, '5486.jpg', 1, '2023-07-10 08:17:41', '2023-07-10 08:17:41'),
+(8, 1, '16951.jpg', 1, '2024-01-15 20:54:38', '2024-01-15 20:54:43'),
+(9, 1, '72528.jpg', 1, '2024-01-15 20:55:10', '2024-01-15 20:55:10');
 
 -- --------------------------------------------------------
 
@@ -1092,7 +1117,8 @@ INSERT INTO `ratings` (`id`, `user_id`, `product_id`, `review`, `rating`, `statu
 (2, 1, 8, 'Lorem ipsum dolor sit amet consectetur .', '3', 1, '2023-07-30 07:11:28', '2023-07-30 23:01:56'),
 (3, 19, 2, 'excellent', '4', 1, '2023-07-31 01:42:36', '2023-07-31 01:43:16'),
 (4, 19, 8, 'good', '4', 1, '2023-07-31 01:52:10', '2023-07-31 01:52:52'),
-(5, 1, 1, 'excellent', '3', 1, '2023-08-01 00:21:24', '2023-08-01 00:21:44');
+(5, 1, 1, 'excellent', '3', 1, '2023-08-01 00:21:24', '2023-08-01 00:21:44'),
+(6, 1, 3, 'good', '3', 1, '2024-01-15 21:06:46', '2024-01-15 21:11:13');
 
 -- --------------------------------------------------------
 
@@ -1183,7 +1209,21 @@ INSERT INTO `recently_viewed_products` (`id`, `product_id`, `user_id`, `session_
 (71, 8, 0, 'eca7b1b64ff7d382b82bf1d5238e7fdd', '2023-08-01 00:31:30', '2023-08-01 00:31:30'),
 (72, 9, 0, 'dedd5b6adc5e2b7b4d208b7c80fcd327', '2023-09-18 16:11:36', '2023-09-18 16:11:36'),
 (73, 5, 0, 'a0bdf5aece759b7963787db87613025a', '2023-09-22 06:12:13', '2023-09-22 06:12:13'),
-(74, 1, 0, '0e0640b29115dd8b6b8e8ef29227774c', '2023-09-22 12:51:17', '2023-09-22 12:51:17');
+(74, 1, 0, '0e0640b29115dd8b6b8e8ef29227774c', '2023-09-22 12:51:17', '2023-09-22 12:51:17'),
+(75, 3, 0, '0e0640b29115dd8b6b8e8ef29227774c', '2023-09-22 15:26:07', '2023-09-22 15:26:07'),
+(76, 8, 0, 'a398276d41dd5ad5e5e7fd86342ab8f4', '2023-12-27 14:57:08', '2023-12-27 14:57:08'),
+(77, 7, 0, 'a398276d41dd5ad5e5e7fd86342ab8f4', '2023-12-27 14:58:17', '2023-12-27 14:58:17'),
+(78, 6, 0, 'a398276d41dd5ad5e5e7fd86342ab8f4', '2023-12-27 14:58:24', '2023-12-27 14:58:24'),
+(79, 5, 0, 'a398276d41dd5ad5e5e7fd86342ab8f4', '2023-12-27 15:03:00', '2023-12-27 15:03:00'),
+(80, 1, 0, 'a398276d41dd5ad5e5e7fd86342ab8f4', '2023-12-27 15:03:07', '2023-12-27 15:03:07'),
+(81, 2, 0, 'a398276d41dd5ad5e5e7fd86342ab8f4', '2023-12-27 15:03:15', '2023-12-27 15:03:15'),
+(82, 7, 0, 'afc16e97412a504114da578044dd29a0', '2024-01-15 21:01:46', '2024-01-15 21:01:46'),
+(83, 9, 0, 'afc16e97412a504114da578044dd29a0', '2024-01-15 21:02:59', '2024-01-15 21:02:59'),
+(84, 6, 0, 'afc16e97412a504114da578044dd29a0', '2024-01-15 21:03:38', '2024-01-15 21:03:38'),
+(85, 3, 0, 'afc16e97412a504114da578044dd29a0', '2024-01-15 21:04:37', '2024-01-15 21:04:37'),
+(86, 1, 0, 'afc16e97412a504114da578044dd29a0', '2024-01-15 21:17:32', '2024-01-15 21:17:32'),
+(87, 7, 0, 'a70150bc2d30c05b3cc2c9bec8f3faf3', '2024-01-16 05:54:13', '2024-01-16 05:54:13'),
+(88, 3, 0, 'a70150bc2d30c05b3cc2c9bec8f3faf3', '2024-01-16 05:54:33', '2024-01-16 05:54:33');
 
 -- --------------------------------------------------------
 
@@ -1493,17 +1533,21 @@ CREATE TABLE `users` (
   `status` tinyint(4) NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `google_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `google_token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `facebook_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `facebook_token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `address`, `city`, `state`, `country`, `pincode`, `mobile`, `email`, `email_verified_at`, `password`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Kishor Pun', 'kathmandu', 'Kathmandu', 'kathmandu', 'Nepal', '344', '9800000000000', 'kishorpun55@gmail.com', NULL, '$2y$10$mgy6G/40Tkr.xPhz/4L1LercCHD4C4cxAPBZzdTRzMqCGbmqGNzDi', 1, NULL, '2023-07-16 03:14:49', '2023-07-23 05:35:07'),
-(19, 'kishor', '', '', '', '', '', '98000000000', 'codemaster890@gmail.com', NULL, '$2y$10$YXIQin5/U4Bdp6Je4oCfmealMllz5p1dzzi5iC8Jw1IA1ifgnA9Ge', 1, NULL, '2023-07-19 03:26:56', '2023-07-19 23:51:01'),
-(20, 'Keefe Pickett', '', '', '', '', '', '534324325', 'kishorpun@gmail.com', NULL, '$2y$10$Lv4K9fbHiISFnGyV1XBdaOp3N4dk1QotkWsyOlaqee82VCCpkv3w.', 1, NULL, '2023-07-19 03:27:29', '2023-07-19 03:29:16');
+INSERT INTO `users` (`id`, `name`, `address`, `city`, `state`, `country`, `pincode`, `mobile`, `email`, `email_verified_at`, `password`, `status`, `remember_token`, `created_at`, `updated_at`, `google_id`, `google_token`, `facebook_id`, `facebook_token`) VALUES
+(1, 'Kishor Pun', 'kathmandu', 'Kathmandu', 'kathmandu', 'Nepal', '344', '9800000000000', 'kishorpun55@gmail.com', NULL, '$2y$10$mgy6G/40Tkr.xPhz/4L1LercCHD4C4cxAPBZzdTRzMqCGbmqGNzDi', 1, NULL, '2023-07-16 03:14:49', '2024-01-16 05:55:21', '106151173330058943657', 'ya29.a0AfB_byCZjSwK0ST8KAgSsM-k_oBOdom6KSZWdkMonejQHOVTHx4Op_qRDMh7Bn9owjEtrxbc2IiVXGL39A-bYlhBMC-zCUytzs3Oi77no_2BXXbQB-jmWl87ED-9xl-HufIyt9puLIvoRfDW0XvW2cLTqkIeSB7zNLN7aCgYKAVMSARESFQHGX2Mio0EF1hbtpML9l7bG2z92Og0171', '', ''),
+(19, 'code master', '', '', '', '', '', '98000000000', 'codemaster890@gmail.com', NULL, '$2y$10$YXIQin5/U4Bdp6Je4oCfmealMllz5p1dzzi5iC8Jw1IA1ifgnA9Ge', 1, NULL, '2023-07-19 03:26:56', '2024-01-15 20:48:33', '112495443176881703149', 'ya29.a0AfB_byD4gF4g6UTxUHytZ4iBrIIFON0Y1NvvP9C5Mfa_BZAbkNTTg1fJrqClY244dUhXRSzq-xNean1xr_92VEdhUMFQXvs7RrRcoxcDLmcGvNttArfJY-zI4WanVUKgMDoS2ev1mWN520K1PgKOicoQJklnE09uiLDsaCgYKAUoSARISFQHGX2MisjBj1hpZkaWcvnh4G3MUPQ0171', '', ''),
+(20, 'Keefe Pickett', '', '', '', '', '', '534324325', 'kishorpun@gmail.com', NULL, '$2y$10$Lv4K9fbHiISFnGyV1XBdaOp3N4dk1QotkWsyOlaqee82VCCpkv3w.', 1, NULL, '2023-07-19 03:27:29', '2023-07-19 03:29:16', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1837,13 +1881,13 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -1885,7 +1929,7 @@ ALTER TABLE `item_statuses`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `newslater_subscribers`
@@ -1897,13 +1941,13 @@ ALTER TABLE `newslater_subscribers`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `orders_products`
 --
 ALTER TABLE `orders_products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `order_logs`
@@ -1921,7 +1965,7 @@ ALTER TABLE `order_statuses`
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pin_codes`
@@ -1957,19 +2001,19 @@ ALTER TABLE `products_filters_values`
 -- AUTO_INCREMENT for table `products_images`
 --
 ALTER TABLE `products_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `recently_viewed_products`
 --
 ALTER TABLE `recently_viewed_products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
 -- AUTO_INCREMENT for table `sections`

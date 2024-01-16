@@ -13,6 +13,7 @@ use Validator;
 use App\Models\Sms;
 use App\Models\Cart;
 use App\Models\Country;
+use Laravel\Socialite\Facades\Socialite;
 
 
 class UserController extends Controller
@@ -115,6 +116,71 @@ class UserController extends Controller
             }
         }
     }
+
+    public function google()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+    
+    public function googleCallback()
+    {
+        $googleUser = Socialite::driver('google')->user();
+        $userCount = User::where('email', $googleUser->email)->count();
+        if($userCount <= 0){
+            User::create([
+                'name' => $googleUser->name,
+                'email' => $googleUser->email,
+                'google_token' => $googleUser->token,
+                'google_id' => $googleUser->id,
+
+            ]);
+        } else {
+            User::where('email', $googleUser->email)->update([
+                'name' => $googleUser->name,
+                'email' => $googleUser->email,
+                'google_token' => $googleUser->token,
+                'google_id' => $googleUser->id,
+
+            ]);
+        }
+        $user = User::where('email', $googleUser->email)->first();
+        Auth::login($user);
+
+        return redirect('/');
+    }
+
+    public function facebook()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+    
+    public function facebookCallback()
+    {
+        $facebookUser = Socialite::driver('facebook')->user();
+        $userCount = User::where('email', $facebookUser->email)->count();
+        if($userCount <= 0){
+            User::create([
+                'name' => $facebookUser->name,
+                'email' => $facebookUser->email,
+                'facebook_token' => $facebookUser->token,
+                'facebook_id' => $facebookUser->id,
+
+            ]);
+        } else {
+            User::where('email', $facebookUser->email)->update([
+                'name' => $facebookUser->name,
+                'email' => $facebookUser->email,
+                'facebook_token' => $facebookUser->token,
+                'facebook_id' => $facebookUser->id,
+
+            ]);
+        }
+        $user = User::where('email', $googleUser->email)->first();
+        Auth::login($user);
+
+        return redirect('/');
+    }
+
 
     public function userConfirm($code = null)
     {

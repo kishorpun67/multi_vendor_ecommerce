@@ -234,6 +234,15 @@ Route::group([], function (){
     Route::match(['get', 'post'], 'user/login-register', [UserController::class, 'loginRegister'])->name('login');
     Route::post('user/register', [UserController::class, 'register'])->name('register');
 
+    // login with google 
+    Route::get('google', [UserController::class, 'google'])->name('google');
+    Route::get('google/callback', [UserController::class, 'googleCallback'])->name('google.callback');
+
+
+    // login with facebook 
+    Route::get('facebook', [UserController::class, 'facebook'])->name('facebook');
+    Route::get('facebook/callback', [UserController::class, 'facebookCallback'])->name('facebook.callback');
+
     // user confirmation 
     Route::get('user/confirm/{code}', [UserController::class, 'userConfirm'])->name('user.confirm');
     

@@ -30,7 +30,7 @@ class RatingController extends Controller
             $rating->product_id = $data['product_id'];
             $rating->review = $data['review'];
             $rating->rating = $data['rate'];
-            $rating->status = 0;
+            $rating->status = 1;
             $rating->save();
             return redirect()->back()->with('success_message', 'Your review has been submitted successfully');
         }

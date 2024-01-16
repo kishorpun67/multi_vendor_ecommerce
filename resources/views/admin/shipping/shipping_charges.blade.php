@@ -5,8 +5,7 @@
     <div class="col-lg-12 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Brands</h4>
-          <a href="{{route('admin.add.edit.brand')}}" style="width:auto; float:right; display:inline;" class="btn btn-primary btn-block">Add brand</a>
+          <h4 class="card-title">Shipping</h4>
           <div class="table-responsive pt-3">
             <table id="section" class="table table-bordered">
               <thead>

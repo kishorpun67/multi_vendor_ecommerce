@@ -13,7 +13,7 @@
     <li>Visit localhost:8000 in your browser</li>
     <li>Visit localhost:8000/admin/login for admin (email = admin@admin.com, password=12345)</li>
     <li>Visit localhost:8000/vendor/login-register for vednor (email = johan@admin.com, password=12345)</li>
-    <li>Visit localhost:8000/vendor/login-register for vednor (email = kishorpun55@gmail.com, password=12345)</li>
+    <li>Visit localhost:8000/user/login-register for vednor (email = kishorpun55@gmail.com, password=12345)</li>
 </ol>
 <ul> 
     <h3>

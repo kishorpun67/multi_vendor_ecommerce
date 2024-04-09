@@ -16,20 +16,22 @@ class VendorController extends Controller
 {
     public function loginRegister(Request $request)
     {
+        if(auth('admin')->check()) return to_route('admin.dashboard');
+    
         if ($request->isMethod('POST')) {
             $data = $request->all();
             $rules = [
-                'email' => 'required|email|max:255',
-                'password' => 'required',
+                'vendor_email' => 'required|email|max:255',
+                'vendor_password' => 'required',
             ];
             $customMessages = [
-                'email.required' => 'Email is required',
-                'email.unique' => 'Valid Email is required',
-                'password.required' => 'Password is required',
+                'emavendor_emailil.required' => 'Email is required',
+                'vendor_email.unique' => 'Valid Email is required',
+                'vendor_password.required' => 'Password is required',
             ];
             $this->validate($request, $rules, $customMessages);      
             
-            if(Auth::guard('admin')->attempt(['email'=> $data['email'], 'password'=> $data['password']])) {
+            if(Auth::guard('admin')->attempt(['email'=> $data['vendor_email'], 'password'=> $data['vendor_password']])) {
                 if(Auth::guard('admin')->user()->type=="vendor" && Auth::guard('admin')->user()->confirm == 'No') {
                     return redirect()->back()->with('error_message', 'Please confirm your email to active your Vendor Account.');
                 } else  if(Auth::guard('admin')->user()->type != 'vendor' && Auth::guard('admin')->user()->status == '0'){
@@ -37,6 +39,8 @@ class VendorController extends Controller
                 }
                 Session::flash('success_message', 'Yor login successfully');
                 return to_route('admin.dashboard');
+            } else {
+                return redirect()->back()->with('error_message', 'Invalid Creditials');
             }
         }
 

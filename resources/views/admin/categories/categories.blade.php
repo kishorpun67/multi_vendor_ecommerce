@@ -41,7 +41,7 @@
                           @if(!empty($admin['category_image']) && file_exists($admin['category_image']))
                             <img src="{{asset($category['category_image'])}}" alt="">
                           @else
-                            <img src="{{ asset('admin/images/no_image.png') }}" alt="">
+                            <img src="{{ asset('admin/images/no_image.png') }}" alt="category image">
                           @endif
                         </td>
                         <td>

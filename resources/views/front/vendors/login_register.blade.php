@@ -45,8 +45,8 @@
                                     <label for="user-name-email">Email 
                                         <span class="astk">*</span>
                                     </label>
-                                    <input type="text" id="user-name-email" name="email" class="text-field" placeholder=" Email">
-                                    @error('email')
+                                    <input type="email" id="user-name-email" name="vendor_email" class="text-field" placeholder=" Email">
+                                    @error('vendor_email')
                                         <p  style="color: red">{{$message}}</p>
                                     @enderror
                                 </div>
@@ -54,14 +54,14 @@
                                     <label for="login-password">Password
                                         <span class="astk">*</span>
                                     </label>
-                                    <input type="password" id="login-password" name="password" class="text-field" placeholder="Password">
-                                    @error('password')
+                                    <input type="password" id="login-vendor_passowrd" name="vendor_password" class="text-field" placeholder="Password">
+                                    @error('vendor_password')
                                         <p  style="color: red">{{$message}}</p>
                                     @enderror
                                 </div>
                                 <div class="group-inline u-s-m-b-30">
                                     <div class="group-1">
-                                        @error('password')
+                                        @error('vendor_password')
                                             <p  style="color: red">{{$message}}</p>
                                         @enderror
                                         <input type="checkbox" class="check-box" id="remember-me-token">
